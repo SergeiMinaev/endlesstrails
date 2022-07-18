@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+<body>
+<style>
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/static/fonts/AmaticSC.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@keyframes anim-title {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+  body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 'main';
+    font-size: 13px;
+    font-family: 'Amatic SC';
+  }
+  #bg { grid-area: main; }
+  #bg img {
+    grid-area: main;
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle; /* prevent 100vh to cause overflow */
+    object-fit: cover;
+    background-color: black;
+  }
+  #content {
+    grid-area: main;
+    display: flex; justify-content: center; align-items: center;
+  }
+  #title {
+    color: white;
+    font-size: 19vw;
+    font-weight: 100;
+    margin-bottom: 54vh;
+
+    /* text clip */
+    background: linear-gradient(-90deg, #c8154f, #4a2d8a, #bad1dd, #0f5e44, #2aa2dd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: anim-title;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+  }
+  @media (min-width: 1200px) {
+    #title {
+      font-size: 12vw;
+    }
+  }
+</style>
+<picture id=bg>
+  <source media='(orientation:landscape)' type="image/jxl"
+    sizes="(max-width: 1280px) 1280px, 1920px"
+    srcset="/static/img/bg.1280x.jxl 1280w, /static/img/bg.jxl 1920w">
+  <source media='(orientation:portrait)' type="image/jxl"
+    sizes="1000px"
+    srcset="/static/img/bg.1000x1200.jxl 1000w">
+  <source media='(orientation:landscape)' type="image/avif"
+    sizes="(max-width: 1280px) 1280px, 1920px"
+    srcset="/static/img/bg.1280x.avif 1280w, /static/img/bg.avif 1920w">
+  <source media='(orientation:portrait)' type="image/avif"
+    sizes="1000px"
+    srcset="/static/img/bg.1000x1200.avif 1000w">
+  <source media='(orientation:landscape)' type="image/webp"
+    sizes="(max-width: 1280px) 1280px, 1920px"
+    srcset="/static/img/bg.1280x.webp 1280w, /static/img/bg.webp 1920w">
+  <source media='(orientation:portrait)' type="image/webp"
+    sizes="1000px"
+    srcset="/static/img/bg.1000x1200.webp 1000w">
+  <img>
+</picture>
+
+<div id=content>
+  <div id=title>endless trails</div>
+</div>
+</body>
+</html>
