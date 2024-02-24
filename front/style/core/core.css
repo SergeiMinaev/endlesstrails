@@ -1,0 +1,25 @@
+@import './fonts.css';
+@import './home.css';
+
+@keyframes anim-title {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+body {
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+#app {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}

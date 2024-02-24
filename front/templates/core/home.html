@@ -1,0 +1,23 @@
+<template id='t-home'>
+<div class='home'>
+    <picture id=bg>
+		<source media='(orientation:landscape)' type="image/jxl"
+			sizes="(max-width: 1280px) 1280px, 1920px"
+			srcset="/static/img/bg.1280x.jxl 1280w, /static/img/bg.jxl 1920w">
+		<source media='(orientation:portrait)' type="image/jxl"
+			sizes="1000px"
+			srcset="/static/img/bg.portrait.jxl 1000w">
+		<source media='(orientation:landscape)' type="image/webp"
+			sizes="(max-width: 1280px) 1280px, 1920px"
+			srcset="/static/img/bg.1280x.webp 1280w, /static/img/bg.webp 1920w">
+		<source media='(orientation:portrait)' type="image/webp"
+			sizes="1000px"
+			srcset="/static/img/bg.portrait.webp 1000w">
+		<img>
+    </picture>
+
+	<div id=content>
+		<div id=title>ENDLESS TRAILS</div>
+	</div>
+</div>
+</template>

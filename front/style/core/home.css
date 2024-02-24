@@ -1,0 +1,33 @@
+.home {
+	display: grid;
+	grid-template-areas: 'main';
+
+	#bg, #content {
+		grid-area: main;
+	}
+	img {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+	}
+	#content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50vh;
+	}
+	#title {
+		color: white;
+		font-size: 19vw;
+		font-weight: 100;
+		background:linear-gradient(-90deg, #c8154f, #4a2d8a, #bad1dd, #0f5e44, #2aa2dd);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: anim-title;
+		animation-duration: 15s;
+		animation-iteration-count: infinite;
+		font-family: 'Amatic SC';
+	}
+}
