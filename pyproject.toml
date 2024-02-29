@@ -6,8 +6,8 @@ authors = [
     {name = "Sergei Minaev", email = "i@zenux.ru"},
 ]
 dependencies = [
-    "ws-watcher @ file:///work/ws_watcher",
     "updb @ git+https://github.com/SergeiMinaev/updb",
+    "ws-watcher @ git+https://github.com/SergeiMinaev/ws_watcher",
 ]
 requires-python = ">=3.11"
 readme = "README.md"

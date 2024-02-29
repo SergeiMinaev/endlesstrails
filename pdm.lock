@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:5ec249ef7f82c66125225fe3a12767d2491a1677b80a6ec493accfa2f1637a67"
+content_hash = "sha256:19dd7632f84028c3740666bf59a8dd84a2245c848d4ccd9654ae2858b31a6bd1"
 
 [[package]]
 name = "asyncio"
@@ -95,7 +95,8 @@ files = [
 name = "ws-watcher"
 version = "0.6.4"
 requires_python = ">=3.8"
-path = "/work/ws_watcher"
+git = "https://github.com/SergeiMinaev/ws_watcher"
+revision = "14f4037f1aba23c47338460422c136fea6f0ec08"
 summary = "Minimalistic file watcher with ability to send WebSocket msgs and execute commands."
 dependencies = [
     "asyncio",
