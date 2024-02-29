@@ -5,7 +5,7 @@ lpsql.toml
 elt.toml
 elt.sock
 local-files
-db/migrations/
+db/schema/
 static/js/
 static/style/
 front/ext/
