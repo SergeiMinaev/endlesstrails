@@ -7,3 +7,5 @@ cd manage
 ./minify.sh
 cd $ELT_HOME/back
 cargo build --release
+cd $ELT_HOME/db
+updb
