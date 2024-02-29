@@ -7,6 +7,7 @@ authors = [
 ]
 dependencies = [
     "ws-watcher @ file:///work/ws_watcher",
+    "updb @ git+https://github.com/SergeiMinaev/updb",
 ]
 requires-python = ">=3.11"
 readme = "README.md"

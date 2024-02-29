@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:e7f2da5e3fc586fa9241662bb6ca1946c56de6ff084d1a2d472ccef8540375f4"
+content_hash = "sha256:5ec249ef7f82c66125225fe3a12767d2491a1677b80a6ec493accfa2f1637a67"
 
 [[package]]
 name = "asyncio"
@@ -28,14 +28,6 @@ files = [
 ]
 
 [[package]]
-name = "lcss"
-version = "0.3.1"
-requires_python = ">=3.8"
-git = "https://github.com/SergeiMinaev/lcss"
-revision = "ca943464e2b05d9a74cde42f485fda7b763ae3c9"
-summary = "CSS pre-processor written in Python with limited set of features: nesting, mixins, bundling and nothing more. It's simple and fast."
-
-[[package]]
 name = "nose"
 version = "1.3.7"
 summary = "nose extends unittest to make testing easier"
@@ -43,6 +35,14 @@ files = [
     {file = "nose-1.3.7-py3-none-any.whl", hash = "sha256:9ff7c6cc443f8c51994b34a667bbcf45afd6d945be7477b52e97516fd17c53ac"},
     {file = "nose-1.3.7.tar.gz", hash = "sha256:f1bffef9cbc82628f6e7d7b40d7e255aefaa1adb6a1b1d26c69a8b79e6208a98"},
 ]
+
+[[package]]
+name = "updb"
+version = "0.1.0"
+requires_python = ">=3.8"
+git = "https://github.com/SergeiMinaev/updb"
+revision = "d7560a7db477ef07d4e6bfc85e874b8398e32134"
+summary = "Simple DB migration manager for non-bloated projects."
 
 [[package]]
 name = "websockets"
