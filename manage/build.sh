@@ -3,7 +3,7 @@ source .env
 
 cd manage
 ./bundle_js.py
-./bundle_css.py
+./bundle_css.sh
 ./minify.sh
 cd $ELT_HOME/back
 cargo build --release

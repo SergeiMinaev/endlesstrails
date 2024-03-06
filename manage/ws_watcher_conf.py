@@ -16,7 +16,7 @@ PATHS = [
         'dir': join(BASE_DIR, 'front/style'),
         'onchange': {
             'cmds': [
-                './bundle_css.py',
+                './bundle_css.sh',
             ],
         },
     },

@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:19dd7632f84028c3740666bf59a8dd84a2245c848d4ccd9654ae2858b31a6bd1"
+content_hash = "sha256:1dfb52c31cad610e6d9668782879e3726bd7293cb6f6c8656a66688a5db29f9c"
 
 [[package]]
 name = "asyncio"
@@ -15,6 +15,14 @@ files = [
     {file = "asyncio-3.4.3-py3-none-any.whl", hash = "sha256:c4d18b22701821de07bd6aea8b53d21449ec0ec5680645e5317062ea21817d2d"},
     {file = "asyncio-3.4.3.tar.gz", hash = "sha256:83360ff8bc97980e4ff25c964c7bd3923d333d177aa4f7fb736b019f26c7cb41"},
 ]
+
+[[package]]
+name = "css-bundler"
+version = "0.1.1"
+requires_python = ">=3.8"
+git = "https://github.com/SergeiMinaev/css-bundler"
+revision = "426a85d8c4a19ef9c9422f35bf3229cd7740f897"
+summary = "Simple CSS bundler in Python."
 
 [[package]]
 name = "inotify"
