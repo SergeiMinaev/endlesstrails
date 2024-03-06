@@ -26,10 +26,11 @@ if [[ $MODE != "prod" ]]; then
 else
 	echo "Mode is 'prod'. Updating deps from git."
 	for path in "${deps_repos[@]}"; do
-		#echo "$path";
-		dir=$(echo $path | tr '/' '\n' | tail -n 1)
+		cd $ELT_HOME/front/ext
+		# Название репозитория без ".git"
+		dir=$(echo $path | sed 's/.*\/\([^\.]*\)\.git/\1/')
 		if [[ ! -d ${dir} ]]; then
-			echo "${path} not exists. Cloning from git."
+			echo "${dir} not exists in `pwd`. Cloning from git.";
 			git clone $path
 		else
 			echo "${path} exists. Pulling from git."

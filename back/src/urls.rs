@@ -3,6 +3,9 @@ use saras::http::{ Request,Resp };
 use urlmatch::urlmatch;
 use saras::http;
 use crate::core;
+use crate::admin;
+use saras::users::users;
+use saras::auth;
 
 
 struct Path<Fut>
@@ -18,8 +21,20 @@ pub async fn url_dispatcher(mut req: Request) -> Resp {
 	let url = req.path.to_string().to_lowercase();
 	let routes = vec![
 		Path {p: &"", f: |req| core::index(req).boxed()},
+		Path {p: &"/admin", f: |req| admin::index(req).boxed()},
+		Path {p: &"/admin/:ctg", f: |req| admin::index(req).boxed()},
+		Path {p: &"/admin/:ctg/:subctg", f: |req| admin::index(req).boxed()},
+		Path {p: &"/admin/:ctg/:subctg/:_", f: |req| admin::index(req).boxed()},
+
+		Path {p: &"/api/user", f: |req| auth::api::get_user(req).boxed()},
+		Path {p: &"/api/auth/login", f: |req| auth::api::login(req).boxed()},
+		Path {p: &"/api/auth/logout", f: |req| auth::api::logout(req).boxed()},
 	];
-	//let protected_routes = vec![];
+	let protected_routes = vec![
+        Path {p: &"/api/users/users", f: |req| users::api::users(req).boxed()},
+        Path {p: &"/api/users/users/:id", f: |req| users::api::users(req).boxed()},
+		Path {p: &"/api/admin_schema/", f: |req| admin::api::admin_schema(req).boxed()},
+	];
 
 	for route in routes.iter() {
 		let r = urlmatch(&url, route.p);

@@ -9,6 +9,11 @@ db/schema/
 static/js/
 static/style/
 front/ext/
+front/js/fr9
+front/js/admin
+front/js/common
+front/style/admin
+front/templates/admin
 
 # vim
 *.swp

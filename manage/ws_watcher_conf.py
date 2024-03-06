@@ -21,6 +21,14 @@ PATHS = [
         },
     },
     {
+        'dir': join(BASE_DIR, 'front/ext/front_admin/style'),
+        'onchange': {
+            'cmds': [
+                './bundle_css.sh',
+            ],
+        },
+    },
+    {
         'dir': join(BASE_DIR, 'front/ext'),
     },
 ]

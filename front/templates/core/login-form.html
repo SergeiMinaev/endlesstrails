@@ -1,0 +1,14 @@
+<template id='t-login-form'>
+<form class='login-form' id='loginform'>
+  <h3>Вход</h3>
+  <div class='login-form__row'>
+    <input type='text' name='email' placeholder='Email' @input='onInput'>
+    <div class='err-msg'></div>
+  </div>
+  <div class='login-form__row'>
+    <input type='password' name='pwd' placeholder='Password' @input='onInput'>
+    <div class='err-msg'></div>
+  </div>
+  <button :disabled='${!state.isFormValid.val}'>Войти</button>
+</form>
+</template>

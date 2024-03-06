@@ -1,7 +1,11 @@
 cd $ELT_HOME
 source .env
 
+source .venv/bin/activate
+pdm sync
+
 cd manage
+./sync_deps.sh
 ./bundle_js.py
 ./bundle_css.sh
 ./minify.sh

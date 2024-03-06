@@ -1,4 +1,4 @@
-#LAST_APPLIED: 3
+#LAST_APPLIED: 5
 
 # 1
 create extension if not exists pgcrypto;
@@ -17,3 +17,10 @@ create table sessions (
 	user_id int null references users(id) on delete cascade,
 	expires timestamp with time zone default now() + '48 hours'::interval
 );
+
+# 4
+alter table users rename to users_users;
+alter table sessions rename to users_sessions;
+
+# 5
+alter table users_sessions rename to auth_sessions;
