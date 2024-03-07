@@ -31,7 +31,7 @@ export class LoginForm {
     btn.disabled = false;
     const resp = await httpPost('auth/login', data);
     if (resp.ok) {
-      this.auth.state.user = data;
+      this.auth.state.user = resp.data;
       schema.loadAdminSchema();
     };
   }

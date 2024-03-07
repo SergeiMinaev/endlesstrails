@@ -5,12 +5,18 @@ use serde_json::json;
 use saras::http::{Request,Resp,json_resp,session_resp,del_session_resp};
 use saras::http;
 use saras::http::JsonResp;
-use saras::users::schemas; 
+use saras::users;
 
 use std::path::PathBuf;
 use saras::schema::schemars::{schema_for, JsonSchema};
 
 
 pub async fn admin_schema(req: Request) -> Resp {
-    return JsonResp::ok("").to_http()
+	let schema = json!({
+		"ctgs": [
+			users::schemas::users_schema(),
+			//tiregame::schemas::tiregame_schema(),
+		]
+	});
+	JsonResp::ok("").content(schema).to_http()
 }
