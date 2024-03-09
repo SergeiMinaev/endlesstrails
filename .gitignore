@@ -14,6 +14,7 @@ front/js/admin
 front/js/common
 front/style/admin
 front/templates/admin
+manage/
 
 # vim
 *.swp
