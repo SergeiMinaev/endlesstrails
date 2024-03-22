@@ -19,7 +19,7 @@ validator = { version = "0.16", features = ["derive"] }
 chrono = "0.4"
 
 urlmatch = { git = "https://github.com/SergeiMinaev/urlmatch" }
-lpsql= { git = "https://github.com/SergeiMinaev/lpsql.rs" , optional=true }
+lpsql= { git = "https://github.com/SergeiMinaev/lpsql.rs" }
 saras = { git = "https://github.com/SergeiMinaev/saras.rs" }
 
 #urlmatch = {path = "/work/urlmatch" }
