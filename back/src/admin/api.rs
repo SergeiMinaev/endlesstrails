@@ -13,6 +13,9 @@ use saras::schema::schemars::{schema_for, JsonSchema};
 
 pub async fn admin_schema(req: Request) -> Resp {
 	let schema = json!({
+		"common": {
+			"storage_hostname": "https://1c2d2c90-a032-428c-9950-83fd4de0109b.selstorage.ru",
+		},
 		"ctgs": [
 			users::schemas::users_schema(),
 			//tiregame::schemas::tiregame_schema(),

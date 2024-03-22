@@ -13,23 +13,29 @@ windows:
 - window_name: srvApp
   panes:
     - shell_command:
+      - source ./env
       - ./manage/app-srv.sh
 
 - window_name: codeF
   focus: true
   panes:
     - shell_command:
+      - source ./env
       - vim
       - :SLoad eltFront
 
 - window_name: codeB
   panes:
     - shell_command:
+      - source ./env
       - cd back
       - vim
       - :SLoad eltBack
 
 - window_name: manage
+  panes:
+    - shell_command:
+      - source ./env
 
 - window_name: sql
   panes:
@@ -44,4 +50,5 @@ windows:
 - window_name: srvWatcher
   panes:
     - shell_command:
+      - source ./env
       - ./manage/watcher.sh

@@ -1,4 +1,4 @@
-#LAST_APPLIED: 5
+#LAST_APPLIED: 6
 
 # 1
 create extension if not exists pgcrypto;
@@ -24,3 +24,6 @@ alter table sessions rename to users_sessions;
 
 # 5
 alter table users_sessions rename to auth_sessions;
+
+# 6
+alter table users_users add column avatar varchar(255);
