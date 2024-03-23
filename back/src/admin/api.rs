@@ -15,8 +15,11 @@ use saras::schema::schemars::{schema_for, JsonSchema};
 pub async fn admin_schema(req: Request) -> Resp {
 	let conf = CONF.read().await;
 	let schema = json!({
-		"common": {
-			"storage_hostname": conf.selectel.container_hostname,
+		"storage": {
+			"hostname": conf.selectel.container_hostname,
+		},
+		"images": {
+			"sizes": conf.image_sizes,
 		},
 		"ctgs": [
 			users::schemas::users_schema(),
